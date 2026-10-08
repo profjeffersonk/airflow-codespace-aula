@@ -1,0 +1,12 @@
+{
+    "name": "Airflow Aula",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+    "containerEnv": {
+        "FORWARDED_ALLOW_IPS": "*",
+        "AIRFLOW__CORE__LOAD_EXAMPLES": "False",
+        "AIRFLOW__CORE__DAGS_FOLDER": "${containerWorkspaceFolder}/dags"
+    },
+
+    "postCreateCommand": "bash .devcontainer/setup.sh"
+}
